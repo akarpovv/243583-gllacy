@@ -8,7 +8,7 @@
     <header class="main-header">
       <h1 class="visually-hidden">Глейси</h1>
       <nav class="main-navigation">
-        <img src="img/logo.svg" class="main-header-logo" width="154" height="64" alt="Логотип"> 
+        <img src="img/logo.svg" class="main-header_logo" width="154" height="64" alt="Логотип"> 
         <ul class="site-navigation">
           <li><a href="catalog.html">Каталог</a>
             <ul>
@@ -24,9 +24,9 @@
         </ul>
 
         <ul class="user-navigation">
-          <li>Поиск</li>
-          <li>Вход</li>
-          <li>Пусто</li>
+          <li><button aria-label="Поиск" class="search-btn"></button></li>
+          <li><a href="#" class="login-link">Вход</a></li>
+          <li><a href="#" class="basket-link">Пусто</a></li>
         </ul>
         <p>С 10 до 20, ежедневно<br><b>8 812 450-25-25</b></p>
       </nav>
@@ -116,6 +116,7 @@
       
       <section class="Contacts">
         <h2 class="visually-hidden">Контакты</h2>
+        <img src="img/map.jpg" alt="" width="1200" height="429" class="visually-hidden" alt="Расположение офиса на карте">
         <p>Адрес главного офиса<br> 
           и офлайн-магазина:<br>
           <b>ул. Большая Конюшенная<br>
@@ -131,16 +132,34 @@
     </main>
 
     <footer class="main-footer">
+
       <div class="socials">
         <ul class="socials-list">
-          <li><a href="#" class="social-button">Твиттер</a></li>
-          <li><a href="#" class="social-button">Инстаграм</a></li>
-          <li><a href="#" class="social-button">Фейсбук</a></li>
-          <li><a href="#" class="social-button">Вконтакте</a></li>
+          <li>
+            <a href="#" class="social-link">
+              <span class="visually-hidden">Твиттер</span> 
+            </a>
+          </li>
+          <li>
+            <a href="#" class="social-link">
+              <span class="visually-hidden">Инстаграм</span> 
+            </a>
+          </li>
+          <li>
+            <a href="#" class="social-link">
+              <span class="visually-hidden">Фейсбук</span> 
+            </a>
+          </li>
+          <li>
+            <a href="#" class="social-link">
+              <span class="visually-hidden">Вконтакте</span> 
+            </a>
+          </li>
         </ul>
       </div>
+
       <nav class="footer-menu">
-        <ul class="footer-menu-list">
+        <ul class="footer-menu_list">
           <li><a href="#">Для поставщиков</a></li>
           <li><a href="#">О производстве</a></li>
           <li><a href="#">Наши документы</a></li>
@@ -155,18 +174,45 @@
 
     <section class="modal modal-fedback-form">
       <h2>Мы обязательно вам ответим!</h2>
-      <!-- Здесь будет форма -->
-      <span class="modal-close">x</span>
+      <form action="https://echo.htmlacademy.ru" method="post" class="fedback-form">
+        <p>
+          <label for="fedback-form_name" class="visually-hidden">Ваше имя:</label>
+          <input type="text" name="name" placeholder="Как вас зовут?" id="fedback-form_name">
+        </p>
+        <p>
+          <label for="fedback-form_email" class="visually-hidden">Электронная почта:</label>
+          <input type="email" name="email" placeholder="Ваша почта для ответа?" id="fedback-form_email">
+        </p>
+        <p>
+          <label for="fedback-form_massage" class="visually-hidden">Ваше сообщение:</label>
+          <textarea name="massage" id="fedback-form_massage" cols="30" rows="10">Напишите что-нибудь...</textarea>
+        </p>
+        <button type="submit" class="button">Отправить</button>    
+      </form>      
+      <button class="fedback-form_btn-close" aria-label="Закрыть форму обратной связи">x</button>
     </section>
 
     <section class="modal modal-login-form">
-      <!-- Здесь будет форма -->
-      <a href="#">Забыли пароль?</a>
-      <a href="#">Новая регистрация</a>
+      <form action="https://echo.htmlacademy.ru" method="post" class="login-form">
+        <p>
+          <label for="login-form_email" class="visually-hidden">Электронная почта:</label>
+          <input type="email" name="email" placeholder="Электронная почта" id="login-form_email">
+        </p>
+        <p>
+          <label for="login-form_passwrod" class="visually-hidden">Пароль:</label>
+          <input type="password" name="password" placeholder="Пароль" id="login-form_password">
+        </p>
+        <button type="submit" class="button">Войти</button>
+        <a href="#">Забыли пароль?</a>
+        <a href="#">Новая регистрация</a>       
+      </form>
     </section>
 
     <section class="modal modal-search-form">
-        <!-- Здесь будет форма -->
+        <form action="https://echo.htmlacademy.ru" method="get" class="search-form">
+          <label for="search-form_search" class="visually-hidden">Поиск по сайту:</label>
+          <input type="search" name="search" placeholder="Что ищем?" id="search-form_search">
+        </form>
     </section>
 
   </body>
